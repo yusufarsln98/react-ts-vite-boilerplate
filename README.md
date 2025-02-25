@@ -13,6 +13,7 @@ A modern and minimal boilerplate for React projects using TypeScript, Vite, and 
 - 💅 [Prettier](https://prettier.io/) - Code formatting
 - 🐶 [Husky](https://typicode.github.io/husky/) - Git hooks made easy
 - 📋 [Commitlint](https://commitlint.js.org/) - Lint commit messages
+- 🧭 [TanStack Router](https://tanstack.com/router) - Type-safe routing for React
 
 ## Getting Started
 
