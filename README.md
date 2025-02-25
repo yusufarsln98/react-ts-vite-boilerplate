@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# React TypeScript Vite Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and minimal boilerplate for React projects using TypeScript, Vite, and other essential tools for a productive development experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ [Vite](https://vitejs.dev/) - Lightning fast build tool
+- ⚛️ [React 19](https://react.dev/) - The library for web UIs
+- 📝 [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- 📚 [Storybook](https://storybook.js.org/) - UI component development environment
+- 🔍 [ESLint](https://eslint.org/) - Code linting
+- 💅 [Prettier](https://prettier.io/) - Code formatting
+- 🐶 [Husky](https://typicode.github.io/husky/) - Git hooks made easy
+- 📋 [Commitlint](https://commitlint.js.org/) - Lint commit messages
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone this repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ['./tsconfig.node.json', './tsconfig.app.json'],
-			tsconfigRootDir: import.meta.dirname,
-		},
-	},
-})
+```bash
+git clone https://github.com/yourusername/react-ts-vite-boilerplate.git
+cd react-ts-vite-boilerplate
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: '18.3' } },
-	plugins: {
-		// Add the react plugin
-		react,
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs['jsx-runtime'].rules,
-	},
-})
+```bash
+npm install
 ```
+
+3. Start development server:
+
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
+- `npm run storybook` - Start Storybook server
+- `npm run build-storybook` - Build Storybook
+
+## Commit Convention
+
+This boilerplate follows [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat`: New feature
+- `fix`: Bug fix
+- docs: Documentation changes
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks
+- `ci`: CI/CD changes
+
+## Project Structure
+
+```
+.
+├── .husky/             # Git hooks
+├── .storybook/         # Storybook configuration
+├── src/
+│   ├── assets/        # Static assets
+│   ├── components/    # React components
+│   ├── lib/          # Utility functions and helpers
+│   ├── stories/      # Storybook stories
+│   └── styles/       # Global styles
+├── public/            # Public static files
+└── ... configuration files
+```
+
+## License
+
+MIT
