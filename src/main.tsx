@@ -1,10 +1,11 @@
 import { createRoot } from 'react-dom/client'
 import React from 'react'
 import App from './App.tsx'
-import './styles/main.css'
-import './styles/tailwind.css'
 import { createRouter, ErrorComponent } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen.ts'
+import './styles/main.css'
+import './styles/tailwind.css'
+import './common/i18n'
 
 const router = createRouter({
 	routeTree: routeTree,

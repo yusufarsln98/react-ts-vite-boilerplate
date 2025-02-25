@@ -14,6 +14,7 @@ A modern and minimal boilerplate for React projects using TypeScript, Vite, and 
 - 🐶 [Husky](https://typicode.github.io/husky/) - Git hooks made easy
 - 📋 [Commitlint](https://commitlint.js.org/) - Lint commit messages
 - 🧭 [TanStack Router](https://tanstack.com/router) - Type-safe routing for React
+- 🌐 [i18next](https://www.i18next.com/) - Internationalization framework for language switching and localization
 
 ## Getting Started
 
