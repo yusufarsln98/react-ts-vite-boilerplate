@@ -5,7 +5,7 @@ import { createRouter, ErrorComponent } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen.ts'
 import './styles/main.css'
 import './styles/tailwind.css'
-import './common/i18n'
+import './lib/utils/i18n.ts'
 
 const router = createRouter({
 	routeTree: routeTree,

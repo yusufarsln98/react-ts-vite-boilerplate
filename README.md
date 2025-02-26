@@ -40,13 +40,14 @@ npm run dev
 ## Available Scripts
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production
+- `npm run build` - Build for production (runs TypeScript compiler and Vite build)
 - `npm run preview` - Preview production build
+- `npm run prepare` - Setup Husky git hooks
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Fix ESLint errors
 - `npm run format` - Format code with Prettier
 - `npm run format:check` - Check code formatting
-- `npm run storybook` - Start Storybook server
+- `npm run storybook` - Start Storybook server (port 6006)
 - `npm run build-storybook` - Build Storybook
 
 ## Commit Convention
@@ -63,22 +64,47 @@ This boilerplate follows [Conventional Commits](https://www.conventionalcommits.
 - `chore`: Maintenance tasks
 - `ci`: CI/CD changes
 
+Collecting workspace informationI'll help update the project structure section in your README.md to reflect your actual workspace structure. Here's the updated version:
+
 ## Project Structure
 
 ```
 .
-├── .husky/             # Git hooks
-├── .storybook/         # Storybook configuration
-├── src/
-│   ├── assets/        # Static assets
-│   ├── components/    # React components
-│   ├── lib/          # Utility functions and helpers
-│   ├── stories/      # Storybook stories
-│   └── styles/       # Global styles
+├── .env.example       # Example environment variables
+├── .husky/            # Git hooks configuration
+├── .storybook/        # Storybook configuration
+├── docs/              # Project documentation
 ├── public/            # Public static files
+├── src/
+│   ├── assets/        # Static assets (images, locales)
+│   ├── common/        # Common utilities and configurations
+│   ├── components/    # Reusable UI components
+│   │   └── ui/        # Common UI components
+│   ├── features/      # Feature-specific modules
+│   ├── hooks/         # Custom React hooks
+│   ├── pages/         # Page components
+│   ├── routes/        # Router configuration
+│   ├── store/         # Global state management
+│   ├── stories/       # Storybook stories
+│   ├── styles/        # Global styles
+│   └── types/         # TypeScript type definitions
 └── ... configuration files
 ```
 
+Key directories:
+
+- `assets/`: Contains static files like images and localization files
+- `common/`: Shared utilities, helpers, and configurations
+- `components/`: Reusable UI components organized by feature
+- `features/`: Feature-specific code organized in modules
+- `hooks/`: Custom React hooks for shared logic
+- `pages/`: Top-level page components
+- `routes/`: TanStack Router configuration and route definitions
+- `store/`: Global state management using Zustand
+- `types/`: TypeScript type definitions and interfaces
+
+This structure better reflects your actual project organization and includes the additional directories like `features`, `hooks`, `pages`, and `store` that are present in your workspace.
+
 ## License
 
-MIT
+MIT License
