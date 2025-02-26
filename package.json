@@ -1,8 +1,23 @@
 {
 	"name": "react-ts-vite-boilerplate",
-	"private": true,
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"type": "module",
+	"author": "Yusuf Arslan <yusufarsln98@outlook.com",
+	"license": "MIT",
+	"keywords": [
+		"vite",
+		"react",
+		"react-ts",
+		"boilerplate",
+		"starter",
+		"template",
+		"typescript",
+		"tailwindcss",
+		"i18next",
+		"zustand",
+		"tanstack",
+		"storybook"
+	],
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",

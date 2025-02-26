@@ -2,6 +2,10 @@
 
 A modern and minimal boilerplate for React projects using TypeScript, Vite, and other essential tools for a productive development experience.
 
+## Credits
+
+This boilerplate was inspired by [vite-react-boilerplate](https://github.com/RicardoValdovinos/vite-react-boilerplate) by Ricardo Valdovinos.
+
 ## Features
 
 - ⚡️ [Vite](https://vitejs.dev/) - Lightning fast build tool
