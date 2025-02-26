@@ -1,8 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider } from '@tanstack/react-router'
-import type { MainRouter } from './main'
 import React from 'react'
 import { auth } from './lib/utils/auth'
+import type { MainRouter } from './main'
 
 const queryClient = new QueryClient()
 

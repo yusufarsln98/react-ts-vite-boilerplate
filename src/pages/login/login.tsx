@@ -1,7 +1,7 @@
-import LoginForm from '@/features/login/components'
-import { Route } from '@/routes/(unauthorized)/login'
 import { useRouter } from '@tanstack/react-router'
 import { useLayoutEffect } from 'react'
+import LoginForm from '@/features/login/components'
+import { Route } from '@/routes/(unauthorized)/login'
 
 const Login: React.FC = () => {
 	const router = useRouter()

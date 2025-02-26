@@ -1,10 +1,11 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import prettier from 'eslint-config-prettier'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import prettierPlugin from 'eslint-plugin-prettier'
+import importPlugin from 'eslint-plugin-import' // Import the eslint-plugin-import
 
 export default tseslint.config(
 	{ ignores: ['dist'] },
@@ -23,6 +24,7 @@ export default tseslint.config(
 			'react-hooks': reactHooks,
 			'react-refresh': reactRefresh,
 			prettier: prettierPlugin, // Add Prettier as a plugin
+			import: importPlugin, // Add import plugin to handle import rules
 		},
 		rules: {
 			...reactHooks.configs.recommended.rules,
@@ -31,6 +33,18 @@ export default tseslint.config(
 				{ allowConstantExport: true },
 			],
 			'prettier/prettier': 'warn', // Enable Prettier formatting warnings
+			'import/order': [
+				'warn',
+				{
+					groups: [
+						['builtin', 'external'],
+						['internal', 'parent', 'sibling', 'index'],
+					],
+					alphabetize: { order: 'asc', caseInsensitive: true },
+				},
+			], // Enforce consistent import order
+			'import/no-duplicates': 'warn', // Prevent duplicate imports
+			'import/newline-after-import': ['warn', { count: 1 }], // Enforce newlines after import statements
 		},
 	}
 )

@@ -1,5 +1,5 @@
-import { auth } from '@/lib/utils/auth'
 import { createFileRoute, Outlet, redirect } from '@tanstack/react-router'
+import { auth } from '@/lib/utils/auth'
 
 export const Route = createFileRoute('/(authorized)/_auth')({
 	// Before loading, authenticate the user via our auth context
