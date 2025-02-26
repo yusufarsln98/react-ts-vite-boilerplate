@@ -13,6 +13,9 @@ const router = createRouter({
 	defaultErrorComponent: ({ error }) => <ErrorComponent error={error} />,
 	defaultPreload: 'intent',
 	scrollRestoration: true,
+	context: {
+		auth: undefined!, // We'll inject this when we render
+	},
 })
 
 export type MainRouter = typeof router
