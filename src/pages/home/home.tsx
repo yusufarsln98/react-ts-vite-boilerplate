@@ -1,22 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from '@/components/language-switcher'
 
 const Home: React.FC = () => {
-	const { t, i18n } = useTranslation()
-	const [currentLang, setCurrentLang] = useState(i18n.language)
-
-	const toggleLanguage = () => {
-		const newLang = currentLang === 'en' ? 'tr' : 'en'
-		i18n.changeLanguage(newLang)
-		setCurrentLang(newLang)
-	}
+	const { t } = useTranslation()
 
 	return (
-		<div className='w-full h-[100vh] flex flex-col items-center justify-center'>
-			<h1>{t('home.greeting')}</h1>
-			<button onClick={toggleLanguage}>
-				{currentLang === 'en' ? 'Değiştir' : 'Switch'}
-			</button>
+		<div className='w-full h-screen flex flex-col items-center justify-center'>
+			<h1 className='text-2xl font-bold mb-4'>{t('home.greeting')}</h1>
+			<LanguageSwitcher />
 		</div>
 	)
 }
