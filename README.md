@@ -25,7 +25,7 @@ This boilerplate was inspired by [vite-react-boilerplate](https://github.com/Ric
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/react-ts-vite-boilerplate.git
+git clone https://github.com/yusufarsln98/react-ts-vite-boilerplate.git
 cd react-ts-vite-boilerplate
 ```
 
